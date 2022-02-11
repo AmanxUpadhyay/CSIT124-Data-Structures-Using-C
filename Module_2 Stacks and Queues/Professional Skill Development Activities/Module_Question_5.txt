@@ -1,0 +1,31 @@
+5. Explain Push, Pop and Peek operation with algorithm.
+
+Answer: All the algorithm are as follow:
+
+-----------------------------------
+- PUSH operation algorithm:
+begin procedure push: stack, data
+   if stack is full
+      return null
+   endif
+   
+   top ← top + 1
+   stack[top] ← data
+end procedure
+-----------------------------------
+- POP operation algorithm:
+begin procedure pop: stack
+   if stack is empty
+      return null
+   endif
+   
+   data ← stack[top]
+   top ← top - 1
+   return data
+end procedure
+-----------------------------------
+- PEEK operation algorithm:
+begin procedure peek
+   return stack[top]
+end procedure
+-----------------------------------

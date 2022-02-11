@@ -1,0 +1,7 @@
+What is the limitation of Sequential Data Structures ?
+
+Ans: There are several Disadvantages of using Sequential Data Structures which are as follows:
+     - Memory usage: More memory is required in the Sequential Data Structures as compared to an array. Because in a Sequential Data Structures, a pointer is also required to store the address of the next element and it requires extra memory for itself.
+     - Traversal: In a Sequential Data Structures traversal is more time-consuming as compared to an array. Direct access to an element is not possible in a Sequential Data Structures as in an array by index. For example, for accessing a mode at position n, one has to traverse all the nodes before it.
+     - Reverse Traversing: In a Sequential Data Structures reverse traversing is not possible, but in the case of a doubly-Sequential Data Structures, it can be possible as it contains a pointer to the previously connected nodes with each node. For performing this extra memory is required for the back pointer hence, there is a wastage of memory.
+     - Random Access: Random access is not as possible in a Sequential Data Structures due to its dynamic memory allocation.

@@ -1,0 +1,25 @@
+Each element of an array DATA [1….10][1….10] requires 8 bytes of storage.If base address of array DATA is 2000, determine the location of DATA[4][5], when the array is stored 
+i.	Row-wise
+ii.	Column-wise
+
+
+Base address B = 2000 
+Element width w = 8 bytes 
+Total rows  r= 10 
+Total columns c = 10 
+ARR[I][J] = ARR[4][5]  => I = 4, J = 5 
+Lowest row index lr = 0 in C++ 
+Lowest column index lc = 0 in C++ 
+
+(i) Row wise  
+DATA[I][J] = B + w(c(I – lr) + (J – Lc)) 
+DATA [4][5] = 2000 + 8(10(4-1) + (5-1)) 
+= 2000 + 272 
+= 2272 
+
+(ii) Column wise 
+DATA [I][J]=B+W(I-lr)+R(J-lc) 
+= 2000+8((4-1)+10(5-1)) 
+= 2000+8(43) 
+= 2000+344 
+= 2344

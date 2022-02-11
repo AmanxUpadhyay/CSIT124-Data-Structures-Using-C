@@ -1,0 +1,11 @@
+1.	Evaluate the following postfix expression using a stack and show the contents of stack after execution of each operation: 120,45,20,+,25,15,-,+,*
+
+Solution: -> 120 
+          -> 45 120 
+          -> 20+45 120 
+          -> 65 120 
+          -> 25 65 120 
+          -> 12-25 65 120 
+          -> 10+65 120 
+          -> 75 * 120 
+          -> 9000

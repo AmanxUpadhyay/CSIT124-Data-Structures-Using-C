@@ -1,0 +1,41 @@
+What is Data Structure? What are their types and subtype? Explain each of subtype with examples in details.
+
+Ans: A data structure is a particular way of organizing data in a computer so that it can be used effectively.
+
+Types and Subtype of Data Structure
+ - Primitive Data Structures
+     - Integer
+     - Float
+     - Character
+     - Pointers
+
+ - Non-primitive Data Structures
+     - Linear
+       - Static
+         - Array
+       - Dynamic
+         - Linked List
+         - Stack
+         - Queue
+
+     - Non Linear
+       - Tree
+       - Graph
+
+Linear Data Structures: A data structure is called linear if all of its elements are arranged in the linear order. In linear data structures, the elements are stored in non-hierarchical way where each element has the successors and predecessors except the first and last element.
+
+Arrays: An array is a collection of similar type of data items and each data item is called an element of the array. The data type of the element may be any valid data type like char, int, float or double.
+
+Linked List: Linked list is a linear data structure which is used to maintain a list in the memory. It can be seen as the collection of nodes stored at non-contiguous memory locations. Each node of the list contains a pointer to its adjacent node.
+
+Stack: is an abstract data type (ADT), can be implemented in most of the programming languages. It is named as stack because it behaves like a real-world stack, for example: - piles of plates or deck of cards etc.
+
+Queue: Queue is a linear list in which elements can be inserted only at one end called rear and deleted only at the other end called front.
+
+--------------------------------------------------
+
+Non Linear Data Structures: This data structure does not form a sequence i.e. each item or element is connected with two or more other items in a non-linear arrangement. The data elements are not arranged in sequential structure.
+
+Trees: Trees are multilevel data structures with a hierarchical relationship among its elements known as nodes. The bottommost nodes in the hierarchy are called leaf node while the topmost node is called root node. Each node contains pointers to point adjacent nodes.
+
+Graphs: Graphs can be defined as the pictorial representation of the set of elements (represented by vertices) connected by the links known as edges. A graph is different from tree in the sense that a graph can have cycle while the tree can not have the one.

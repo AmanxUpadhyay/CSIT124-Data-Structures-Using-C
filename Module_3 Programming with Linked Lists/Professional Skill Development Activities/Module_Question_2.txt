@@ -1,0 +1,11 @@
+Define Sparse Matrix.
+
+Ans: A Two Dimensional Data Object is a Matrix made of Rows and Columns, Therefore Having total Rows*Columns values. 
+If the most of elements of the matrix have 0 values, then it is known as Sparse Matrix.
+
+Example: 1 0 0 0
+         0 1 0 0
+         0 0 1 0
+         0 0 0 1
+
+Representing a sparse matrix by a 2D array leads to wastage of lots of memory as zeroes in the matrix are of no use in most of the cases. So, instead of storing zeroes with non-zero elements, we only store non-zero elements. This means storing non-zero elements with triples- (Row, Column, value). 

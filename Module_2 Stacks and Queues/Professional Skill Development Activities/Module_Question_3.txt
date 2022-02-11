@@ -1,0 +1,56 @@
+3.	What is difference between an array and a stack housed in an array? Why stack is called LIFO data structure? Explain how push and pop operation are implemented on a stack.
+
+Answer: The Major Difference between Array and Stack is that an Array stores similar type of Elements of the same type. Whereas Stack which is housed in an Array can store Elements of different types.
+
+Stack is called LIFO is that the Elements inserted at the last, is the first element to come out of the list.
+
+Explanation of Push and Pop Operations:
+
+- Push Operation is a process of putting a new data elements onto stack. It involves checking if the stack is full, If the stack is not full, we need to increments pointer to point next empty space. Then add data element to the stack location, where pointer is pointing.
+-----------------------------------------------------
+begin procedure push: stack, data
+
+   if stack is full
+      return null
+   endif
+   
+   top ← top + 1
+   stack[top] ← data
+
+end procedure
+------------------------------------------------------
+void push(int data) {
+   if(!isFull()) {
+      top = top + 1;   
+      stack[top] = data;
+   } else {
+      printf("Could not insert data, Stack is full.\n");
+   }
+}
+------------------------------------------------------
+
+- Pop Operation is a process of removing data from the stack. In an Array implementation of pop() operation, the data element is not actually removed, instead Pointer is decremented to a lower position in the stack to point to next value. It involves checking if the stack is empty. If the stack is empty, produces an error and exit. If the stack is not empty, accesses the data element at which pointer is pointing. Decreases the value of pointer by 1.
+------------------------------------------------------
+begin procedure pop: stack
+
+   if stack is empty
+      return null
+   endif
+   
+   data ← stack[top]
+   top ← top - 1
+   return data
+
+end procedure
+------------------------------------------------------
+int pop(int data) {
+
+   if(!isempty()) {
+      data = stack[top];
+      top = top - 1;   
+      return data;
+   } else {
+      printf("Could not retrieve data, Stack is empty.\n");
+   }
+}
+------------------------------------------------------

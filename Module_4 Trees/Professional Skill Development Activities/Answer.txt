@@ -1,0 +1,24 @@
+Write down complexity of all sort and in which situation those sorts should be used?
+
+     Algorithm          Best       Average      worst
+Ans: Bubble Sort       Ω(n^2)   	θ(n^2)   	O(n^2)
+     Insertion Sort    Ω(n)	        θ(n^2)	    O(n^2)
+     Merge Sort        Ω(n log(n))	θ(n log(n))	O(n log(n))
+     Quick Sort        Ω(n log(n))	θ(n log(n))	O(n^2)
+     Radix Sort        Ω(nk)	    θ(nk)	    O(nk)
+
+Use Bubble Sort only when the data to be sorted is stored on rotating drum memory. It's optimal for that purpose, but not for random-access memory. These days, that amounts to "don't use Bubble Sort".
+
+Use Insertion Sort or Selection Sort up to some size that you determine by testing it against the other sorts you have available. This usually works out to be around 20-30 items, but YMMV. In particular, when implementing divide-and-conquer sorts like Merge Sort and Quick Sort, you should "break out" to an Insertion sort or a Selection sort when your current block of data is small enough.
+
+Also use Insertion Sort on nearly-sorted data, for example if you somehow know that your data used to be sorted, and hasn't changed very much since.
+
+Use Merge Sort when you need a stable sort (it's also good when sorting linked lists), beware that for arrays it uses significant additional memory.
+
+Generally you don't use "plain" Quick Sort at all, because even with intelligent choice of pivots it still has Omega(n^2) worst case but unlike Insertion Sort it doesn't have any useful best cases. The "killer" cases can be constructed systematically, so if you're sorting "untrusted" data then some user could deliberately kill your performance, and anyway there might be some domain-specific reason why your data approximates to killer cases. If you choose random pivots then the probability of killer cases is negligible, so that's an option, but the usual approach is "IntroSort" - a QuickSort that detects bad cases and switches to HeapSort.
+
+Radix Sort is a bit of an oddball. It's difficult to find common problems for which it is best, but it has good asymptotic limit for fixed-width data (O(n), where comparison sorts are Omega(n log n)). If your data is fixed-width, and the input is larger than the number of possible values (for example, more than 4 billion 32-bit integers) then there starts to be a chance that some variety of radix sort will perform well.
+
+Which sorting techniques is an application of recursion?
+
+Ans: There are mainly two Sorting techniques which are application of recursion: Merge Sort and Quick Sort.

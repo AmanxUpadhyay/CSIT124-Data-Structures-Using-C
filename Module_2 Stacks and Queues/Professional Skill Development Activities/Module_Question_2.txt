@@ -1,0 +1,24 @@
+Discuss the various applications of Stacks. Also write an Algorithm to PUSH and POP an ELement into the Stack.
+
+Ans: Stacks can be used for expression evaluation. Stacks can be used to check parenthesis matching in an expression. Stacks can be used for Conversion from one form of expression to another. Stacks can be used for Memory Management. Stack data structures are used in backtracking problems.
+
+PUSH Operation:
+begin procedure push: stack, data
+   if stack is full
+      return null
+   endif
+
+   top ← top + 1
+   stack[top] ← data
+end procedure
+
+POP Operation:
+begin procedure pop: stack
+   if stack is empty
+      return null
+   endif
+   
+   data ← stack[top]
+   top ← top - 1
+   return data
+end procedure
